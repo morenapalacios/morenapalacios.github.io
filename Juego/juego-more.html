@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>BUSCAPIJAS</title>
+    <link rel="shortcut icon" href="../Accesorios/buscar.png"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="juego-style.css">
+    <canvas id="bg-canvas" class="p5Canvas" width="1340" height="0" style="width: 1340px; height: 0px;"></canvas>
+</head>
+<body onload=inicio()>
+    <main>
+        <div id='buscapijas'>
+            <a href="../Index/index.html"><img id='buscapijas' src='../Accesorios/titulo1.png'></a>
+        </div>
+        <img id="avatar" src="../Avatares/more-avatar.png">
+        <div id="tablero">
+        </div>
+        <div id="menu">
+            <h1>menu</h1>
+            <ul>
+                <button class="btnMenu" id="btnR" onclick=showReinicio()><li id="liR">reiniciar</li></button>
+
+                <button class="btnMenu" id="btnI" onclick=showInstructions();><li>como jugar?</li></button>
+
+                <button class="btnMenu" id="btnA" onclick=showAudio();><li>audio</li></button>
+                <button class="btnMenu" id="btnInx" onclick=showInicio()><li>inicio</li></button>
+            </ul>
+        </div>
+
+        <div id="instrucciones-back" style="display:none;">
+            <div class="menudiv" id="instrucciones">
+                <p></p>
+                <button class="cerrar" onclick=closeInstrucciones()>X</button>
+                <h1>como jugar?</h1>
+                <p>Destapar las casillas donde no hay <img id="pito" src="../Accesorios/pito-icono-piel.png"> y marcar las que esconden <img id="pito" src="../Accesorios/pito-icono-piel.png">
+                    <br><br>Una casilla numerada indica la cantidad de <img id="pito" src="../Accesorios/pito-icono-piel.png"> en las casillas que la rodean
+                </p>
+                <h2>controles</h2>
+                <div id="controles-izq">
+                <img id="mouse-izq" src="../Accesorios/mouse-izquierdo.png">
+                <p>Destapar casilla</p>
+                </div>
+                <div id="controles-der">
+                <img id="mouse-der" src="../Accesorios/mouse-derecho.png">
+                <br><br><p>Marcar casilla</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="audio-back" style="display:none;">
+            <div class="menudiv" id="audio">
+                <p></p>
+                <button class="cerrar" onclick=closeAudio()>X</button>
+                <h1>audio</h1>
+                <audio id="musica" autoplay="" loop="" src="../Accesorios/Plantasia.mp3">
+                </audio>
+                <div id="volumen">
+                    <img id="bajar" src="../Accesorios/bajar-volumen.png">
+                    <div id="slider-container">
+                        <input oninput=setBar() id="slider" type="range" min="0" max="100" value="30">
+                        <span id="bar"><span id="fill"></span></span>
+                    </div>
+                    <img id="subir" src="../Accesorios/subir-volumen.png">
+                </div>
+                <div id="reproducir">
+                    <button class="btnReprod" onclick=pauseMusica()><img id="pause" src="../Accesorios/pause.png"></button>
+                    <button class="btnReprod"onclick=playMusica()><img id="play" src="../Accesorios/play.png"></button>
+                </div>
+                <p></p>
+            </div>
+        </div>
+
+        <div id="reiniciar-back" style="display:none;">
+            <div id="reiniciar">
+                <p></p>
+                <button class="cerrar" onclick=closeReinicio()>X</button>
+                <h1>reiniciar?</h1>
+                <div id="botonesOpcion">
+                    <button id="si" onclick=reinicio()>si</button>
+                    <button id="no" onclick=closeReinicio()>no!</button>
+                </div>
+                <p></p>
+            </div>
+        </div>
+        
+        <div id="inicio-back" style="display:none;">
+            <div id="inicio">
+                <p></p>
+                <button class="cerrar" onclick=closeInicio()>X</button>
+                <h1>volver al inicio?</h1>
+                <div id="botonesOpcion">
+                    <button id="si" onclick="location.href='../Index/index.html'">si</button>
+                    <button id="no" onclick=closeInicio()>no!</button>
+                </div>
+                <p></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- SCRIPTS -->
+    <script type="text/javascript" src="p5.min.js"></script>
+    <script type="text/javascript" src="background.js"></script>
+    <script type="text/javascript" src='tablero.js'></script>
+
+</body>
+</html>

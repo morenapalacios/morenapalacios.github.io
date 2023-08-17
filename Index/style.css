@@ -1,0 +1,52 @@
+:root {
+  --color-bg: rgb(12, 131, 85);
+  --color-bg-alt: rgb(0, 255, 255);
+}
+
+/* full page */
+body {
+  background: radial-gradient(at center, var(--color-bg-alt), var(--color-bg));
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+img {   
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+#buscapijas{
+  margin-top: 20px;
+  text-align: center;
+  transform: translateY(8%);
+}
+
+#lupa{
+  margin-top: 10%;
+  text-align: center;
+}
+
+a img{
+  height:150px;
+}
+
+
+/* graphpaper */
+
+#bg-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  padding: 0;
+  margin: 0;
+}

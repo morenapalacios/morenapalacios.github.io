@@ -9,6 +9,16 @@ function cambiarImgH() {
   }
 }
 
+function cambiarImgC() {
+  var avatarImg = document.getElementById("avatar");
+
+  if (avatarImg.src.endsWith("celi-avatar.png")) {
+    avatarImg.src = "../Avatares/celi-guiño.png";
+  } else {
+    avatarImg.src = "../Avatares/celi-avatar.png";
+  }
+}
+
 
 /* global createCanvas, windowWidth, windowHeight, stroke, clear, fill, rect, mouseX, mouseY */
 const body = document.getElementsByTagName("body")[0];

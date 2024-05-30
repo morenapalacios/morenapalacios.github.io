@@ -55,15 +55,16 @@ img {
   margin: 0;
 }
 
-#avatares {
-  text-align: center;
+#avatares { 
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1em;
 }
 
 .avatar {
-  height: 280px;
-  display:inline;
-  margin:8px;
   background: transparent;
+  width: 100%;
+  height: 100%;
 }
 
 .avatar:hover{

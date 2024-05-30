@@ -238,7 +238,7 @@ img {
 /*Avatar-------------------------------------------------------------------------------*/
 #avatar {
   height: 390px;
-  margin-left:10%;
+  margin-left:3%;
 }
 
 /*Menu----------------------------------------------------------------------------------*/
@@ -463,7 +463,6 @@ li {
 	border-radius: 5px;
 	outline: none;
 	background-color: transparent;
-  -webkit-appearance: none;
 }
 
 #slider::-webkit-slider-thumb {
